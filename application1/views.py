@@ -9,10 +9,12 @@ class DrugViewSet(viewsets.ViewSet):
         dru=Drug.objects.all()
         seri=DrugSerializer(dru,many=True)
         return Response(seri.data)
+    
     def GetDrugById(self,request,id):
         dru=Drug.objects.get(Did=id)
         seri=DrugSerializer(dru)
         return Response(seri.data)
+    
     def createdrug(self,request):
         seri=DrugSerializer(data=request.data)
         if seri.is_valid():

@@ -1,5 +1,5 @@
 from django.db import models
-#added this--------------
+#added this--------------models
 class Drug(models.Model):
     Did=models.IntegerField()
     Dname=models.CharField(max_length=25)
